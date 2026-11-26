@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+tools/_card.html
+preview/
+.DS_Store

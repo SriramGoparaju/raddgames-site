@@ -1,0 +1,90 @@
+[
+ {
+  "slug": "nonogram",
+  "tagcls": "tag",
+  "tag": "On every daily page",
+  "name": "Nonogram",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell fill-ink\"></span><span class=\"cell fill-ink\"></span><span class=\"cell\"></span><span class=\"cell fill-ink\"></span></span>",
+  "essence": "The numbers describe a hidden picture."
+ },
+ {
+  "slug": "sudoku",
+  "tagcls": "tag",
+  "tag": "On every daily page",
+  "name": "Sudoku",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell ink\">5</span><span class=\"cell ink\">3</span><span class=\"cell sage\">4</span></span>",
+  "essence": "Nine of everything, once each."
+ },
+ {
+  "slug": "word-search",
+  "tagcls": "tag",
+  "tag": "On every daily page",
+  "name": "Word Search",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell sage\">L</span><span class=\"cell sage\">A</span><span class=\"cell sage\">D</span></span>",
+  "essence": "One theme, hidden eight ways."
+ },
+ {
+  "slug": "cross-math",
+  "tagcls": "tag",
+  "tag": "On every daily page",
+  "name": "Cross Math",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell ink\">2</span><span class=\"cell op\">+</span><span class=\"cell ink\">3</span><span class=\"cell op\">×</span><span class=\"cell ink\">4</span><span class=\"cell op\">=</span><span class=\"cell ink wide\">14</span></span>",
+  "essence": "Sums that balance across and down."
+ },
+ {
+  "slug": "block-puzzle",
+  "tagcls": "tag",
+  "tag": "On every daily page",
+  "name": "Block Puzzle",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell fill-sage\"></span><span class=\"cell fill-sage\"></span><span class=\"cell\"></span><span class=\"cell\"></span></span>",
+  "essence": "Every piece fits. Fill the board with no gaps."
+ },
+ {
+  "slug": "killer-sudoku",
+  "tagcls": "tag rot",
+  "tag": "Rotates onto the page",
+  "name": "Killer Sudoku",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell ink wide\">15</span><span class=\"cell\"></span><span class=\"cell sage\">7</span><span class=\"cell sage\">8</span></span>",
+  "essence": "Sudoku, where the dotted shapes add up."
+ },
+ {
+  "slug": "sun-and-moon",
+  "tagcls": "tag rot",
+  "tag": "Rotates onto the page",
+  "name": "Sun &amp; Moon",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell gold\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><circle cx=\"10\" cy=\"10\" r=\"4\" fill=\"currentColor\"/><g stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"><path d=\"M10 1.5v2.5M10 16v2.5M1.5 10H4M16 10h2.5M4 4l1.8 1.8M14.2 14.2 16 16M4 16l1.8-1.8M14.2 5.8 16 4\"/></g></svg></span><span class=\"cell moon\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M13.5 15.5A6.5 6.5 0 0 1 8 3.2a6.5 6.5 0 1 0 8.8 8.8 6.4 6.4 0 0 1-3.3 3.5z\" fill=\"currentColor\"/></svg></span><span class=\"cell muted\">?</span></span>",
+  "essence": "Two symbols, evenly shared."
+ },
+ {
+  "slug": "minesweeper",
+  "tagcls": "tag rot",
+  "tag": "Rotates onto the page",
+  "name": "Minesweeper",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell ink\">1</span><span class=\"cell ink\">2</span><span class=\"cell muted\">1</span></span>",
+  "essence": "Clear the field. You never have to guess."
+ },
+ {
+  "slug": "pipes",
+  "tagcls": "tag rot",
+  "tag": "Rotates onto the page",
+  "name": "Pipes",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell sage\">●</span><span class=\"cell sage\"></span><span class=\"cell sage\">●</span></span>",
+  "essence": "Join every pair. Fill every square."
+ },
+ {
+  "slug": "kakuro",
+  "tagcls": "tag rot",
+  "tag": "Rotates onto the page",
+  "name": "Kakuro",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell ink wide\">16</span><span class=\"cell sage\">9</span><span class=\"cell sage\">7</span></span>",
+  "essence": "A crossword built from sums."
+ },
+ {
+  "slug": "futoshiki",
+  "tagcls": "tag rot",
+  "tag": "Rotates onto the page",
+  "name": "Futoshiki",
+  "vig": "<span class=\"vig\" aria-hidden=\"true\"><span class=\"cell ink\">4</span><span class=\"cell sign\">&gt;</span><span class=\"cell sage\">2</span></span>",
+  "essence": "Order the square."
+ }
+]

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete your account in Lumiwire: Radd Games</title>
+<meta name="description" content="How to delete what Lumiwire stores about you, what is removed, and what is kept.">
+<link rel="canonical" href="https://raddgames.com/lumiwire/delete-account/">
+<meta name="theme-color" content="#1C1F26">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Radd Games">
+<meta property="og:title" content="Delete your account in Lumiwire: Radd Games">
+<meta property="og:description" content="How to delete what Lumiwire stores about you, what is removed, and what is kept.">
+<meta property="og:url" content="https://raddgames.com/lumiwire/delete-account/">
+<meta property="og:image" content="https://raddgames.com/og/lumiwire.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preload" href="../../assets/fonts/bagel-fat-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the page</a>
+<header class="site-head"><div class="wrap"><div class="bar">
+  <a class="brand" href="../../" aria-label="Radd Games, home"><svg class="raddy" viewBox="0 0 64 64" aria-hidden="true">
+<rect x="4" y="6" width="56" height="54" rx="18" fill="#FFC93C" stroke="#1C1A33" stroke-width="4"/>
+<g class="eye"><circle cx="22" cy="28" r="9.5" fill="#fff" stroke="#1C1A33" stroke-width="3"/><circle class="pupil" cx="22" cy="28" r="4.2" fill="#1C1A33"/><circle class="lid" cx="22" cy="28" r="9.5" fill="#FFC93C" stroke="#1C1A33" stroke-width="3"/></g>
+<g class="eye"><circle cx="42" cy="28" r="9.5" fill="#fff" stroke="#1C1A33" stroke-width="3"/><circle class="pupil" cx="42" cy="28" r="4.2" fill="#1C1A33"/><circle class="lid" cx="42" cy="28" r="9.5" fill="#FFC93C" stroke="#1C1A33" stroke-width="3"/></g>
+<path d="M20 43 Q32 57 44 43 Z" fill="#1C1A33" stroke="#1C1A33" stroke-width="3" stroke-linejoin="round"/>
+<path d="M26.5 49.5 Q32 46 37.5 49.5 Q32 54 26.5 49.5 Z" fill="#FF6FA8"/>
+<rect x="29.3" y="43" width="5.4" height="4.6" rx="1.2" fill="#fff"/>
+</svg><span>Radd<small>Games</small></span></a>
+  <nav class="site-nav" aria-label="Site"><a href="../../#games">Games</a><a href="../../support/">Support</a><a href="../../about/">About</a><a class="cta" href="mailto:support@raddgames.com?subject=Hello%20Radd%20Games">Say hello</a></nav>
+</div></div></header>
+<main id="main" class="world" data-world="lumiwire">
+<section class="game-hero"><div class="wrap">
+  <a href="../../lumiwire/"><img src="../../assets/img/lumiwire/icon.webp" alt="Lumiwire app icon" width="256" height="256" class="icon" decoding="async"></a>
+  <div class="meta">
+    <span class="chip"><span class="dot"></span>Coming soon · Wire puzzle</span>
+    <h1 class="title">Lumiwire</h1>
+    
+    
+  </div>
+</div></section>
+<nav class="tabs" aria-label="Lumiwire pages"><div class="wrap"><ul><li><a href="../../lumiwire/">About</a></li><li><a href="../../lumiwire/how-to-play/">How to play</a></li><li><a href="../../lumiwire/support/">Support</a></li><li><a href="../../lumiwire/privacy/">Privacy</a></li><li><a href="../../lumiwire/terms/">Terms</a></li><li><a href="../../lumiwire/delete-account/" aria-current="page">Delete your account</a></li></ul></div></nav>
+<section class="block"><div class="narrow"><div class="card prose">
+<h1>Delete your Lumiwire account</h1>
+<p class="updated">Last updated 11 November 2026</p>
+
+<p class="lede">You can delete your Lumiwire account and everything stored with it at any time, for any reason, from inside the app. It takes effect at once, and it cannot be undone.</p>
+
+<div class="box">
+  <p><strong>In the app: Settings → Delete account.</strong></p>
+  <p>The app asks twice ("Delete account?", then "Delete everything?"). It needs an internet connection: if you are offline, nothing is deleted and the app tells you so. When it is done, the app starts again as a new player, with a new anonymous account. Nothing is queued, reviewed or delayed.</p>
+</div>
+
+<h2>What gets deleted</h2>
+<ul>
+  <li>Your cloud save: your display name, your progress (stars, levels, Daily solves and times, Blitz results), your settings, and, once the Shop arrives, your coins, your items and the purchase records kept in it.</li>
+  <li>Your row on every leaderboard your account wrote: the Daily, Blitz today and Blitz week boards, past days and weeks included.</li>
+  <li>The anonymous account itself, in Firebase Authentication.</li>
+  <li>Everything Lumiwire kept on your phone: progress, settings, your display name and any results still waiting to be sent.</li>
+</ul>
+
+<h2>What is kept, and why</h2>
+<ul>
+  <li><strong>Crash reports</strong> carry no account identifier and cannot be traced back to you. Crashlytics deletes them after 90 days.</li>
+  <li><strong>Usage statistics</strong> (Firebase Analytics, collected only after consent) are recorded against Analytics' own identifier for the installation, not against your account. Deleting the account does not remove events already recorded, but nothing connects them to an account any more. They expire on Google's schedule, at most fourteen months.</li>
+  <li><strong>Purchase records</strong> are kept by Google Play or the App Store, and by RevenueCat on our behalf, for their accounting and tax records. They carry only an anonymous identifier. Remove Ads belongs to your store account, so "Restore purchases" brings it back even after you delete your Lumiwire account.</li>
+  <li><strong>Coins and items</strong> are deleted with the account, and are not refunded.</li>
+</ul>
+
+<h2>If you no longer have the app</h2>
+<p>Lumiwire accounts are anonymous: no name, email address or phone number is attached to them. Without the app on your phone, neither we nor anyone else can tell which account was yours, and once the app is uninstalled its account can no longer be reached from any phone. What such an account leaves behind holds no personal detail except the display name on your leaderboard rows.</p>
+<p>If you want those leaderboard rows removed, email <a href="mailto:support@raddgames.com?subject=Delete%20my%20Lumiwire%20rows">support@raddgames.com</a> with "Delete my Lumiwire rows" in the subject line, the display name you used, and roughly when you played. We reply to confirm, and delete the matching rows within 30 days. If the app is still on your phone, Delete account in Settings is quicker and removes everything.</p>
+
+<h2>Resetting is not deleting</h2>
+<p>Settings → Reset progress only starts the Journey over: stars and levels go back to the beginning, on your phone and in your cloud save. Your account, your display name, and your Daily and Blitz records stay.</p>
+
+<p class="muted">Lumiwire · published by Sriram Goparaju · <a href="../../lumiwire/privacy/">Privacy policy</a> · <a href="../../lumiwire/terms/">Terms of use</a></p>
+
+<p class="moved">This page moved to raddgames.com on 26 November 2026. Only the contact address changed.</p>
+</div></div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="../../"><svg class="raddy" viewBox="0 0 64 64" aria-hidden="true">
+<rect x="4" y="6" width="56" height="54" rx="18" fill="#FFC93C" stroke="#1C1A33" stroke-width="4"/>
+<g class="eye"><circle cx="22" cy="28" r="9.5" fill="#fff" stroke="#1C1A33" stroke-width="3"/><circle class="pupil" cx="22" cy="28" r="4.2" fill="#1C1A33"/><circle class="lid" cx="22" cy="28" r="9.5" fill="#FFC93C" stroke="#1C1A33" stroke-width="3"/></g>
+<g class="eye"><circle cx="42" cy="28" r="9.5" fill="#fff" stroke="#1C1A33" stroke-width="3"/><circle class="pupil" cx="42" cy="28" r="4.2" fill="#1C1A33"/><circle class="lid" cx="42" cy="28" r="9.5" fill="#FFC93C" stroke="#1C1A33" stroke-width="3"/></g>
+<path d="M20 43 Q32 57 44 43 Z" fill="#1C1A33" stroke="#1C1A33" stroke-width="3" stroke-linejoin="round"/>
+<path d="M26.5 49.5 Q32 46 37.5 49.5 Q32 54 26.5 49.5 Z" fill="#FF6FA8"/>
+<rect x="29.3" y="43" width="5.4" height="4.6" rx="1.2" fill="#fff"/>
+</svg><span>Radd<small>Games</small></span></a>
+      <p>Puzzle games for the five minutes you definitely have.</p>
+    </div>
+    <div><h2>Games</h2><ul><li><a href="../../inkbloom/">Inkbloom</a></li><li><a href="../../lumiwire/">Lumiwire</a></li><li><a href="../../shapelings/">Shapelings</a></li><li><a href="../../loopo/">Loopo</a></li></ul></div>
+    <div><h2>Help</h2><ul>
+      <li><a href="../../support/">Support</a></li>
+      <li><a href="mailto:support@raddgames.com?subject=I%20would%20like%20to%20test%20your%20games">Become a tester</a></li>
+      <li><a href="../../about/">About</a></li>
+      <li><a href="mailto:support@raddgames.com">support@raddgames.com</a></li></ul></div>
+    <div style="grid-column: span 2"><h2>Privacy, terms and your data</h2><ul><li>Inkbloom: <a href="../../inkbloom/privacy/">Privacy</a> · <a href="../../inkbloom/terms/">Terms</a> · <a href="../../inkbloom/delete-account/">Delete data</a></li><li>Lumiwire: <a href="../../lumiwire/privacy/">Privacy</a> · <a href="../../lumiwire/terms/">Terms</a> · <a href="../../lumiwire/delete-account/">Delete data</a></li><li>Shapelings: <a href="../../shapelings/privacy/">Privacy</a> · <a href="../../shapelings/terms/">Terms</a> · <a href="../../shapelings/delete-account/">Delete data</a></li><li>Loopo: <a href="../../loopo/privacy/">Privacy</a> · <a href="../../loopo/terms/">Terms</a> · <a href="../../loopo/delete-account/">Delete data</a></li>
+      <li><a href="../../privacy/">Privacy on this website</a></li></ul></div>
+  </div>
+  <div class="foot-base"><span>© 2026 Radd Games. Games published by Sriram Goparaju, India.</span><span>This site uses no cookies and no trackers.</span></div>
+</div></footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

@@ -321,7 +321,7 @@ def home():
 </div></section>'''
     ld = {"@context": "https://schema.org", "@type": "Organization", "name": C.SITE_NAME, "url": C.SITE_ORIGIN + "/",
           "logo": C.SITE_ORIGIN + "/icon-512.png", "email": C.SUPPORT_EMAIL,
-          "founder": {"@type": "Person", "name": C.PUBLISHER, "alternateName": C.ALIAS}}
+          "founder": {"@type": "Person", "name": C.ALIAS}}
     return dict(title="Radd Games: small puzzle games with big “one more go” energy",
                 desc="Radd Games makes calm, clever puzzle games for phones: Inkbloom, Lumiwire, Shapelings and Loopo. No sign-ups and no ads in the middle of a puzzle.",
                 body=body, nav="games", ld=ld)
@@ -359,7 +359,7 @@ def about():
     body = f'''{page_head("About", "A very small studio with a very long to-do list.", "Radd Games makes puzzle games for phones: the kind you open for five minutes and close forty minutes later, slightly proud of yourself.")}
 <section class="doc"><div class="narrow prose">
   <h2 style="margin-top:0">Who we are</h2>
-  <p>Radd Games is an independent studio from {C.COUNTRY}. The games are designed, built and published by {C.ALIAS} ({C.PUBLISHER} on paper), with a great deal of help from a small circle of patient friends who test everything first.</p>
+  <p>Radd Games is an independent studio from {C.COUNTRY}. The games are designed, built and published by {C.ALIAS}, with a great deal of help from a small circle of patient friends who test everything first.</p>
   <h2>What we make</h2>
   <p>Calm, fair puzzle games. Easy to start, hard to put down, and never rude about it: no ads in the middle of a puzzle, no sign-up wall, and no dark tricks to keep you tapping.</p>
   <h2>How to reach us</h2>

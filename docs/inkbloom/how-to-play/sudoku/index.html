@@ -6,7 +6,7 @@
 <title>How to play Sudoku in Inkbloom: Radd Games</title>
 <meta name="description" content="Sudoku in Inkbloom: Nine of everything, once each. Rules, controls and tips.">
 <link rel="canonical" href="https://raddgames.com/inkbloom/how-to-play/sudoku/">
-<meta name="theme-color" content="#F6F3EC">
+<meta name="theme-color" content="#FFFFFF">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Radd Games">
 <meta property="og:title" content="How to play Sudoku in Inkbloom: Radd Games">
@@ -17,13 +17,13 @@
 <link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../../../favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="../../../apple-touch-icon.png">
-<link rel="preload" href="../../../assets/fonts/bagel-fat-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../../../assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../../assets/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to the page</a>
-<header class="site-head"><div class="wrap"><div class="bar">
+<header class="site-head"><div class="wrap bar">
   <a class="brand" href="../../../" aria-label="Radd Games, home"><svg class="raddy" viewBox="0 0 64 64" aria-hidden="true">
 <rect x="4" y="6" width="56" height="54" rx="18" fill="#FFC93C" stroke="#1C1A33" stroke-width="4"/>
 <g class="eye"><circle cx="22" cy="28" r="9.5" fill="#fff" stroke="#1C1A33" stroke-width="3"/><circle class="pupil" cx="22" cy="28" r="4.2" fill="#1C1A33"/><circle class="lid" cx="22" cy="28" r="9.5" fill="#FFC93C" stroke="#1C1A33" stroke-width="3"/></g>
@@ -31,22 +31,18 @@
 <path d="M20 43 Q32 57 44 43 Z" fill="#1C1A33" stroke="#1C1A33" stroke-width="3" stroke-linejoin="round"/>
 <path d="M26.5 49.5 Q32 46 37.5 49.5 Q32 54 26.5 49.5 Z" fill="#FF6FA8"/>
 <rect x="29.3" y="43" width="5.4" height="4.6" rx="1.2" fill="#fff"/>
-</svg><span>Radd<small>Games</small></span></a>
-  <nav class="site-nav" aria-label="Site"><a href="../../../#games">Games</a><a href="../../../support/">Support</a><a href="../../../about/">About</a><a class="cta" href="mailto:support@raddgames.com?subject=Hello%20Radd%20Games">Say hello</a></nav>
-</div></div></header>
-<main id="main" class="world" data-world="inkbloom">
-<section class="game-hero"><div class="wrap">
-  <a href="../../../inkbloom/"><img src="../../../assets/img/inkbloom/icon.webp" alt="Inkbloom app icon" width="256" height="256" class="icon" decoding="async"></a>
-  <div class="meta">
-    <span class="chip"><span class="dot"></span>Coming soon · Daily logic puzzles</span>
-    <h1 class="title">Inkbloom</h1>
-    
-    
-  </div>
-</div></section>
-<nav class="tabs" aria-label="Inkbloom pages"><div class="wrap"><ul><li><a href="../../../inkbloom/">About</a></li><li><a href="../../../inkbloom/how-to-play/" aria-current="page">How to play</a></li><li><a href="../../../inkbloom/support/">Support</a></li><li><a href="../../../inkbloom/privacy/">Privacy</a></li><li><a href="../../../inkbloom/terms/">Terms</a></li><li><a href="../../../inkbloom/delete-account/">Delete your account</a></li></ul></div></nav>
-<section class="block"><div class="narrow"><div class="card prose">
-<p class="muted" style="margin-bottom:14px"><a href="../../../inkbloom/how-to-play/">How to play Inkbloom</a> / Sudoku</p><section class="game-head">
+</svg><span>Radd Games</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><i></i>Menu</button>
+  <nav class="site-nav" id="site-nav" aria-label="Site"><a href="../../../#games">Games</a><a href="../../../support/">Support</a><a href="../../../about/">About</a><a class="hello" href="mailto:support@raddgames.com?subject=Hello%20Radd%20Games">Say hello</a></nav>
+</div></header>
+<main id="main" data-game="inkbloom">
+<div class="subnav"><div class="wrap">
+  <a class="gname" href="../../../inkbloom/"><img src="../../../assets/img/inkbloom/icon.webp" alt="" width="256" height="256" decoding="async">Inkbloom</a>
+  <nav class="tabs" aria-label="Inkbloom pages"><ul><li><a href="../../../inkbloom/">Overview</a></li><li><a href="../../../inkbloom/how-to-play/" aria-current="page">How to play</a></li><li><a href="../../../inkbloom/support/">Support</a></li><li><a href="../../../inkbloom/privacy/">Privacy</a></li><li><a href="../../../inkbloom/terms/">Terms</a></li><li><a href="../../../inkbloom/delete-account/">Delete your account</a></li></ul></nav>
+  <a class="back" href="../../../#games">← All games</a>
+</div></div>
+<section class="doc"><div class="narrow prose">
+<p class="crumb muted"><a href="../../../inkbloom/how-to-play/">How to play Inkbloom</a> / Sudoku</p><section class="game-head">
     <h1>Sudoku</h1>
     <p class="essence">Nine of everything, once each.</p>
     <p>The classic number puzzle on a 9×9 grid split into nine 3×3 boxes, graded honestly from gentle to genuinely hard. It appears on every daily page.</p>
@@ -55,7 +51,7 @@
   <section class="section"><h2>Tips and tricks</h2><ol class="tips"><li><div><strong>Find the last empty square.</strong> <span>A row, column or box with eight digits already has only one answer for its ninth.</span></div></li><li><div><strong>Scan one digit at a time.</strong> <span>Pick a digit and look across each box. Where its row and column are already blocked, the digit may have only one place left.</span></div></li><li><div><strong>Look for hidden singles.</strong> <span>A digit that fits in just one square of a box, row or column belongs there, even if that square has other candidates.</span></div></li><li><div><strong>Use pairs.</strong> <span>If two squares in a row can only be the same two digits, those digits are taken. Remove them from every other square in that row.</span></div></li><li><div><strong>Box and line.</strong> <span>If a digit&#x27;s candidates inside one box all sit in a single row, it cannot appear anywhere else in that row.</span></div></li><li><div><strong>Pencil late, not never.</strong> <span>Fill the easy digits first. Bring in pencil marks when the obvious moves run out.</span></div></li></ol></section>
   <section class="section"><h2>Where to find it</h2><p class="where">It appears on every daily page, and the Library has Easy, Medium and Hard tracks of it. Stuck? A hint costs ink drops, and Inkbloom Plus makes hints unlimited.</p></section>
 <nav class="next-prev" aria-label="Other games"><a href="../../../inkbloom/how-to-play/nonogram/">← Nonogram</a><a href="../../../inkbloom/how-to-play/word-search/">Word Search →</a></nav>
-</div></div></section>
+</div></section>
 </main>
 <footer class="site-foot"><div class="wrap">
   <div class="foot-grid">
@@ -67,19 +63,19 @@
 <path d="M20 43 Q32 57 44 43 Z" fill="#1C1A33" stroke="#1C1A33" stroke-width="3" stroke-linejoin="round"/>
 <path d="M26.5 49.5 Q32 46 37.5 49.5 Q32 54 26.5 49.5 Z" fill="#FF6FA8"/>
 <rect x="29.3" y="43" width="5.4" height="4.6" rx="1.2" fill="#fff"/>
-</svg><span>Radd<small>Games</small></span></a>
+</svg><span>Radd Games</span></a>
       <p>Puzzle games for the five minutes you definitely have.</p>
     </div>
     <div><h2>Games</h2><ul><li><a href="../../../inkbloom/">Inkbloom</a></li><li><a href="../../../lumiwire/">Lumiwire</a></li><li><a href="../../../shapelings/">Shapelings</a></li><li><a href="../../../loopo/">Loopo</a></li></ul></div>
     <div><h2>Help</h2><ul>
       <li><a href="../../../support/">Support</a></li>
-      <li><a href="mailto:support@raddgames.com?subject=I%20would%20like%20to%20test%20your%20games">Become a tester</a></li>
+      <li><a href="mailto:support@raddgames.com?subject=I%20would%20like%20to%20test%20your%20games&body=Hi%20Radd%2C%0A%0AI%27d%20like%20to%20test%20your%20games%20on%20Android.%0A%0AThe%20Gmail%20address%20I%20use%20on%20Google%20Play%3A%20%0AMy%20phone%20model%3A%20%0A%0AThanks%21">Become a tester</a></li>
       <li><a href="../../../about/">About</a></li>
       <li><a href="mailto:support@raddgames.com">support@raddgames.com</a></li></ul></div>
-    <div style="grid-column: span 2"><h2>Privacy, terms and your data</h2><ul><li>Inkbloom: <a href="../../../inkbloom/privacy/">Privacy</a> · <a href="../../../inkbloom/terms/">Terms</a> · <a href="../../../inkbloom/delete-account/">Delete data</a></li><li>Lumiwire: <a href="../../../lumiwire/privacy/">Privacy</a> · <a href="../../../lumiwire/terms/">Terms</a> · <a href="../../../lumiwire/delete-account/">Delete data</a></li><li>Shapelings: <a href="../../../shapelings/privacy/">Privacy</a> · <a href="../../../shapelings/terms/">Terms</a> · <a href="../../../shapelings/delete-account/">Delete data</a></li><li>Loopo: <a href="../../../loopo/privacy/">Privacy</a> · <a href="../../../loopo/terms/">Terms</a> · <a href="../../../loopo/delete-account/">Delete data</a></li>
+    <div class="foot-legal"><h2>Privacy, terms and your data</h2><ul><li>Inkbloom: <a href="../../../inkbloom/privacy/">Privacy</a> · <a href="../../../inkbloom/terms/">Terms</a> · <a href="../../../inkbloom/delete-account/">Delete data</a></li><li>Lumiwire: <a href="../../../lumiwire/privacy/">Privacy</a> · <a href="../../../lumiwire/terms/">Terms</a> · <a href="../../../lumiwire/delete-account/">Delete data</a></li><li>Shapelings: <a href="../../../shapelings/privacy/">Privacy</a> · <a href="../../../shapelings/terms/">Terms</a> · <a href="../../../shapelings/delete-account/">Delete data</a></li><li>Loopo: <a href="../../../loopo/privacy/">Privacy</a> · <a href="../../../loopo/terms/">Terms</a> · <a href="../../../loopo/delete-account/">Delete data</a></li>
       <li><a href="../../../privacy/">Privacy on this website</a></li></ul></div>
   </div>
-  <div class="foot-base"><span>© 2026 Radd Games. Games published by Sriram Goparaju, India.</span><span>This site uses no cookies and no trackers.</span></div>
+  <div class="foot-base"><span>© 2026 Radd Games. Games by Radd (Sriram Goparaju), India.</span><span>This site uses no cookies and no trackers.</span></div>
 </div></footer>
 <script src="../../../assets/site.js" defer></script>
 </body>

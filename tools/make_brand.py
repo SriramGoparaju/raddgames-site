@@ -7,6 +7,7 @@ Run it only when the mascot, a game's icon or a tagline changes:
 The results are committed, so build.py itself needs no browser.
 """
 import os, sys
+from html import escape as e
 from pathlib import Path
 from PIL import Image
 from playwright.sync_api import sync_playwright
@@ -21,53 +22,46 @@ IMAGES = (ROOT / "images").as_uri()
 RADDY = (STATIC / "favicon.svg").read_text(encoding="utf-8")
 
 FACES = f"""
-@font-face {{ font-family: "Bagel Fat One"; src: url("{FONTS}/bagel-fat-one-latin-400-normal.woff2"); }}
+@font-face {{ font-family: "Bricolage Grotesque"; src: url("{FONTS}/bricolage-grotesque-latin-wght-normal.woff2"); font-weight: 200 800; }}
 @font-face {{ font-family: "Figtree"; src: url("{FONTS}/figtree-latin-wght-normal.woff2"); font-weight: 300 900; }}
-@font-face {{ font-family: "Fredoka"; src: url("{FONTS}/fredoka-latin-wght-normal.woff2"); font-weight: 300 700; }}
-@font-face {{ font-family: "Lilita One"; src: url("{FONTS}/lilita-one-latin-400-normal.woff2"); }}
-@font-face {{ font-family: "Nunito"; src: url("{FONTS}/nunito-latin-wght-normal.woff2"); font-weight: 200 1000; }}
-@font-face {{ font-family: "Fraunces"; src: url("{FONTS}/fraunces-latin-wght-italic.woff2"); font-style: italic; font-weight: 100 900; }}
 * {{ box-sizing: border-box; margin: 0; }}
-body {{ width: 1200px; height: 630px; overflow: hidden; font-family: "Figtree", sans-serif; }}
-.badge {{ position: absolute; left: 64px; bottom: 52px; display: flex; align-items: center; gap: 14px; font: 400 34px/1 "Bagel Fat One"; }}
-.badge svg {{ width: 58px; height: 58px; }}
+body {{ width: 1200px; height: 630px; overflow: hidden; font-family: "Figtree", sans-serif; background: #FFFFFF; color: #15141B; }}
+.badge {{ position: absolute; left: 64px; bottom: 50px; display: flex; align-items: center; gap: 12px; font: 800 30px/1 "Bricolage Grotesque"; letter-spacing: -.02em; }}
+.badge svg {{ width: 50px; height: 50px; }}
+.phone {{ position: absolute; padding: 7px; border-radius: 34px; background: #17161D; box-shadow: 0 30px 60px -30px rgba(21, 20, 27, .6); }}
+.phone img {{ display: block; width: 100%; border-radius: 28px; }}
+.panel {{ position: absolute; right: 40px; top: 40px; bottom: 40px; width: 500px; border-radius: 40px; background: #F4F3EE; overflow: hidden; }}
 """
 
-WORLDS = {
-    "inkbloom": dict(bg="#F6F3EC", fg="#26241F", sub="#6E6A60", title='500 italic 112px/1 "Fraunces"', badge="#26241F"),
-    "lumiwire": dict(bg="#1C1F26", fg="#F6F7F9", sub="#BFC5D1", title='600 112px/1 "Fredoka"', badge="#FFD45E"),
-    "shapelings": dict(bg="radial-gradient(700px 520px at 100% 0%, #FFE3EB 0 60%, transparent 61%), #FFF3F6", fg="#2A1B4A", sub="#6A5B86", title='900 108px/1 "Nunito"', badge="#2A1B4A"),
-    "loopo": dict(bg="linear-gradient(180deg, #3FC0F8 0%, #2C8EEC 34%, #2458CC 72%, #213A98 100%)", fg="#FFFFFF", sub="#E3F1FF", title='400 124px/1 "Lilita One"', badge="#FFFFFF"),
-}
+ACCENT = {"inkbloom": "#5E7A56", "lumiwire": "#F2B705", "shapelings": "#D81B60", "loopo": "#2A62D6"}
 
 
 def studio_card():
-    icons = "".join(
-        f'<img src="{IMAGES}/{g["slug"]}/icon.png" style="width:150px;height:150px;border-radius:24%;border:6px solid #fff;outline:4px solid #1C1A33;box-shadow:0 10px 0 #1C1A33;rotate:{r}deg">'
-        for g, r in zip(C.GAMES, (-7, 5, -4, 8)))
+    phones = "".join(
+        f'<div class="phone" style="left:{28 + i * 116}px; top:{110 + (34 if i % 2 else -6)}px; width:106px; padding:4px; border-radius:18px"><img style="border-radius:14px" src="{IMAGES}/{g["slug"]}/{g["hero_shot"]}.png"></div>'
+        for i, g in enumerate(C.GAMES))
     return f"""<!doctype html><meta charset="utf-8"><style>{FACES}
-body {{ background: #FFF6E3; color: #1C1A33; background-image: radial-gradient(rgba(28,26,51,.13) 2px, transparent 2.3px); background-size: 28px 28px; }}
-.sun {{ position: absolute; right: -180px; top: -260px; width: 700px; height: 700px; border-radius: 50%; background: #FFC93C; }}
-h1 {{ position: absolute; left: 64px; top: 70px; font: 400 104px/.98 "Bagel Fat One"; width: 760px; }}
-h1 span {{ display: inline-block; background: #1C1A33; color: #FFF6E3; padding: 0 .16em .04em; border-radius: .18em; rotate: -2deg; }}
-.icons {{ position: absolute; left: 64px; bottom: 150px; display: flex; gap: 30px; }}
-.mascot {{ position: absolute; right: 90px; top: 70px; width: 250px; filter: drop-shadow(0 12px 0 #1C1A33); rotate: 6deg; }}
-</style><div class="sun"></div><div class="mascot">{RADDY}</div>
-<h1>Small games. <span>Big</span> “one more go” energy.</h1><div class="icons">{icons}</div>
+h1 {{ position: absolute; left: 64px; top: 86px; width: 600px; font: 800 82px/.97 "Bricolage Grotesque"; letter-spacing: -.045em; }}
+h1 em {{ font-style: normal; background: linear-gradient(transparent 58%, #FFC93C 58% 92%, transparent 92%); }}
+p {{ position: absolute; left: 66px; top: 380px; width: 540px; font: 500 26px/1.4 "Figtree"; color: #3F3D49; }}
+</style><div class="panel">{phones}</div>
+<h1>Small games. Big <em>“one more go”</em> energy.</h1>
+<p>Inkbloom, Lumiwire, Shapelings and Loopo.</p>
 <div class="badge">{RADDY}<span>raddgames.com</span></div>"""
 
 
 def game_card(g):
-    w = WORLDS[g["slug"]]
+    a, b = g["hero_shots"]
     return f"""<!doctype html><meta charset="utf-8"><style>{FACES}
-body {{ background: {w["bg"]}; color: {w["fg"]}; }}
-.icon {{ position: absolute; left: 64px; top: 64px; width: 210px; height: 210px; border-radius: 23%; box-shadow: 0 12px 0 rgba(0,0,0,.25); }}
-h1 {{ position: absolute; left: 64px; top: 312px; font: {w["title"]}; }}
-p {{ position: absolute; left: 68px; top: 446px; font: 600 40px/1.2 "Figtree"; color: {w["sub"]}; width: 800px; }}
-.shot {{ position: absolute; right: 70px; top: 54px; width: 300px; border-radius: 34px; border: 10px solid #15141F; box-shadow: 0 14px 0 rgba(0,0,0,.28); rotate: 5deg; }}
-.badge {{ color: {w["badge"]}; font-size: 28px; }} .badge svg {{ width: 46px; height: 46px; }}
-</style><img class="icon" src="{IMAGES}/{g["slug"]}/icon.png"><img class="shot" src="{IMAGES}/{g["slug"]}/{g["hero_shot"]}.png">
-<h1>{g["name"]}</h1><p>{g["tagline"]}</p><div class="badge">{RADDY}<span>Radd Games</span></div>"""
+.icon {{ position: absolute; left: 64px; top: 64px; width: 132px; height: 132px; border-radius: 23%; box-shadow: 0 0 0 1px rgba(21, 20, 27, .08); }}
+.kind {{ position: absolute; left: 66px; top: 232px; font: 700 20px/1 "Figtree"; letter-spacing: .1em; text-transform: uppercase; color: #6A6874; }}
+.kind::before {{ content: ""; display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: {ACCENT[g["slug"]]}; margin-right: 12px; }}
+h1 {{ position: absolute; left: 62px; top: 266px; font: 800 104px/1 "Bricolage Grotesque"; letter-spacing: -.045em; }}
+p {{ position: absolute; left: 66px; top: 392px; width: 560px; font: 600 30px/1.3 "Figtree"; color: #3F3D49; }}
+</style><img class="icon" src="{IMAGES}/{g["slug"]}/icon.png">
+<div class="panel"><div class="phone" style="left:44px; top:70px; width:212px"><img src="{IMAGES}/{g["slug"]}/{a}.png"></div>
+<div class="phone" style="left:262px; top:130px; width:212px"><img src="{IMAGES}/{g["slug"]}/{b}.png"></div></div>
+<div class="kind">{e(g["genre"])}</div><h1>{e(g["name"])}</h1><p>{e(g["tagline"])}</p><div class="badge">{RADDY}<span>Radd Games</span></div>"""
 
 
 def main():
@@ -91,7 +85,7 @@ def main():
         icon.screenshot(path=str(STATIC / "icon-512.png"), omit_background=True)
         browser.close()
     big = Image.open(STATIC / "icon-512.png")
-    touch = Image.new("RGB", (180, 180), "#FFF6E3")
+    touch = Image.new("RGB", (180, 180), "#FFFFFF")
     small = big.resize((150, 150), Image.LANCZOS)
     touch.paste(small, (15, 15), small)
     touch.save(STATIC / "apple-touch-icon.png")

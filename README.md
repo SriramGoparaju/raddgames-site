@@ -20,7 +20,7 @@ The build stops if any link or picture in the built pages points at a file that 
 | Privacy policy, terms, delete page for each game | `legal/<game>/` (body only, with `{{EMAIL}}` style placeholders) |
 | Inkbloom's eleven how-to pages and its FAQ | `pages/inkbloom/` |
 | Pictures (PNG sources; the build makes WebP) | `images/<game>/` |
-| Look and scripts | `src/site.css`, `src/site.js` |
+| Look and scripts ("Gallery": one white look on every page; a game brings only its screenshots, all in the same phone frame, and one accent colour) | `src/site.css`, `src/site.js` |
 | Favicon, share cards, files copied as they are | `static/` (drawn by `tools/make_brand.py`) |
 | Fonts (self-hosted, SIL Open Font License) | `fonts/` |
 
@@ -41,10 +41,18 @@ The build stops if any link or picture in the built pages points at a file that 
 - **A game goes live in a store:** in `content.py` set `play_live` / `appstore_live` (and `appstore_url`), build, push.
 - **New screenshots:** replace `images/<game>/screen-N.png` (same names), build, push. Captions are in `content.py` (`shots`).
 - **A policy changes:** edit `legal/<game>/<page>.html`, update its date, build, push. The same text must be what the store listing links to.
-- **A new game:** add a block to `GAMES` in `content.py`, a world in `src/site.css` (`[data-world="<slug>"]`), pictures in `images/<slug>/`, three files in `legal/<slug>/`, then `python tools/make_brand.py` for its share card.
+- **A new game:** add a block to `GAMES` in `content.py`, its accent colour in `src/site.css` (`[data-game="<slug>"]`), `hero_shots` and `card_shots` in its block, pictures in `images/<slug>/`, three files in `legal/<slug>/`, then `python tools/make_brand.py` for its share card.
 - **The support email:** `SUPPORT_EMAIL` in `content.py`. It appears on every page and in every policy.
 
 ## Legal texts
 
 The policies, terms and delete pages were carried over on 26 November 2026 from each game's own site
 (inkbloompuzzles.com, lumiwire-site, shapelings-site, loopo-privacy), word for word. Only the contact address changed.
+
+## The look (redesigned 26 November 2026)
+
+Option 1, "Gallery", chosen by Sriram from five options. Rules that keep it coherent:
+
+- One header, one footer, one type pair (Bricolage Grotesque for headings, Figtree for text) and one phone frame on every page.
+- A game never changes the page colours. It brings its screenshots and one accent colour, used only for the dot before its kind label, the underline under the current tab, and its share card.
+- Screenshots sit in a carousel inside the page width, with arrows, dots and a "1–4 of 8" count. Four at a time on a computer, one at a time on a phone. Every screenshot is a plain phone screen; the site draws the frame.

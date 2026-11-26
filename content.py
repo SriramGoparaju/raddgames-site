@@ -11,7 +11,8 @@ import content_shapelings as sh
 SITE_NAME = "Radd Games"
 SITE_ORIGIN = "https://raddgames.com"
 SUPPORT_EMAIL = "support@raddgames.com"   # Cloudflare Email Routing -> the owner's inbox. Test it before go-live.
-PUBLISHER = "Sriram Goparaju"
+PUBLISHER = "Sriram Goparaju"                # the real name: only where the law or the stores need it
+ALIAS = "Radd"                               # the name everything else uses (two d's, never "Raddi")
 COUNTRY = "India"
 YEAR = "2026"
 MOVED = "26 November 2026"                # the day the legal pages moved to raddgames.com
@@ -60,6 +61,8 @@ GAMES = [
             ("screen-8", "Killer sudoku in the Evening Ink theme."),
         ],
         "hero_shot": "screen-3",
+        "hero_shots": ("screen-3", "screen-6"),   # the two phones at the top of the game page
+        "card_shots": ("screen-1", "screen-3"),   # the two phones on the home page card
         "framed": True,
         "features": [
             ("One page a day", "A fresh page arrives every day with eight puzzles on it: four easy, three medium and one hard. Solve all eight and the day is perfect."),
@@ -99,7 +102,9 @@ GAMES = [
             ("screen-8", "Wire styles and board finishes in the Shop."),
         ],
         "hero_shot": "screen-1",
-        "framed": False,   # these are store pictures: caption and phone are already in the image
+        "hero_shots": ("screen-1", "screen-3"),
+        "card_shots": ("screen-1", "screen-4"),
+        "framed": True,    # plain phone screenshots (store/raw/phone), drawn in the site's phone frame
         "features": [(h, t) if h != "Easy on the eyes" else
                      (h, "Soft greys and gold, in dark and in light. Every pair has a symbol as well as a colour, and the colours are tuned to stay distinct for colour-blind players.")
                      for h, t in lw.FEATURES],
@@ -136,6 +141,8 @@ GAMES = [
             ("screen-4", "A Hard level, waiting."),
         ],
         "hero_shot": "screen-1",
+        "hero_shots": ("screen-1", "screen-5"),
+        "card_shots": ("screen-1", "screen-3"),
         "framed": True,
         "features": sh.FEATURES,
         "rules": sh.RULES,
@@ -164,6 +171,8 @@ GAMES = [
             ("screen-3", "A level in play, with its goal at the top."),
         ],
         "hero_shot": "screen-2",
+        "hero_shots": ("screen-1", "screen-2"),
+        "card_shots": ("screen-1", "screen-2"),
         "framed": True,
         "features": [
             ("One finger, one rule", "Draw a loop around bubbles of one colour. That's the whole game, and it's surprisingly hard to stop."),
